@@ -83,3 +83,5 @@ Click the **Deploy** button on Render.
 Access the Deployed App:
 Once deployed, your app will be accessible via the provided URL.
 
+
+[Hosted url example](https://recipe-recommendation-flask.onrender.com/alldata)
