@@ -128,10 +128,10 @@ def time_based():
 
 
 if __name__ == '__main__':
-    # WSGIRequestHandler.protocol_version = "HTTP/1.1"
-    app.run()
+    WSGIRequestHandler.protocol_version = "HTTPs/1.1"
+    app.run(debug=True,host="0.0.0.0",port=5000)
 
-# debug=True
+
 
 
 

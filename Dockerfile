@@ -10,7 +10,7 @@ WORKDIR /app
 # install the dependencies and packages in the requirements file
 RUN pip install -r requirements.txt
 
-EXPOSE $PORT
+EXPOSE 5000
 
 # configure the container to run in an executed manner
 ENTRYPOINT [ "python" ]
