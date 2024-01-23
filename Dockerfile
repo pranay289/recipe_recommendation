@@ -12,7 +12,7 @@ RUN pip install -r requirements.txt
 
 # EXPOSE 5000
 EXPOSE $PORT
-CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
+CMD gunicorn --bind 0.0.0.0:5000 wsgi:app
 # # configure the container to run in an executed manner
 # ENTRYPOINT [ "python" ]
 
