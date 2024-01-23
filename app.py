@@ -7,6 +7,7 @@ from werkzeug.serving import WSGIRequestHandler
 import datetime
 import os
 import ast
+from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__)
 
@@ -128,8 +129,10 @@ def time_based():
 
 
 if __name__ == '__main__':
-    WSGIRequestHandler.protocol_version = "HTTPs/1.1"
-    app.run(debug=True,host="0.0.0.0",port=5000)
+    # WSGIRequestHandler.protocol_version = "HTTP/1.1"
+    # app.run(debug=False,host="0.0.0.0",port=5000)
+    http_server = WSGIServer(('', 5000), app)
+    http_server.serve_forever()
 
 
 
