@@ -1,4 +1,4 @@
-scikit-learn==1.4.0
-Python==3.9.6
-pandas==2.2
-Flask==3.0.1
+scikit-learn>=1.4.0
+Python>=3.9.6
+pandas>=2.2
+Flask>=3.0.1
