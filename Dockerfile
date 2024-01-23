@@ -1,5 +1,5 @@
 # start by pulling the python image
-FROM python:3.9-alpine3.18
+FROM python:3.10-bookworm
 
 # copy every content from the local file to the image
 COPY . /app
