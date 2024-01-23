@@ -1,0 +1,23 @@
+on:
+  workflow_dispatch: 
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Docker
+      uses: docker-practice/actions-setup-docker@master
+      with:
+        dockerfile: Dockerfile
+        context: .
+
+    - name: Build Docker image
+      run: docker build -t flask_docker .
+
+    - name: Run Docker container
+      run: |
+        docker run flask_docker
